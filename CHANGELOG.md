@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.15.0 (mp)
+
+ * Update to skia-safe >= 0.73.0 (tested up to latest at time of this release: v0.78.2).
+
+#### BREAKING CHANGE:
+ * The signature of the callback passed to `Renderer::draw()` has changed so that the `Canvas` reference
+   is no longer mutable.
+   ```diff
+   -- pub fn draw<F: FnOnce(&mut skia_safe::Canvas, CoordinateSystemHelper)>(
+   ++ pub fn draw<F: FnOnce(&skia_safe::Canvas, CoordinateSystemHelper)>(
+   ```
+   This is due to a change in `skia-safe` [v0.67.0](https://github.com/rust-skia/rust-skia/releases/tag/0.67.0), with
+   [PR#816](https://github.com/rust-skia/rust-skia/pull/816)
+
 ## 0.14.1
 
  * Update to rafx 0.0.14. This fixes an compile error caused by a non-semver change upstream
