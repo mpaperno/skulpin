@@ -201,7 +201,7 @@ fn update(app_state: &mut ExampleAppState) {
 
 fn draw(
     app_state: &ExampleAppState,
-    canvas: &mut skia_safe::Canvas,
+    canvas: &skia_safe::Canvas,
     _coordinate_system_helper: &CoordinateSystemHelper,
     _window: &dyn HasRawWindowHandle,
 ) {

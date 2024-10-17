@@ -67,7 +67,7 @@ pub struct AppDrawArgs<'a, 'b, 'c, 'd> {
     pub app_control: &'a AppControl,
     pub input_state: &'b InputState,
     pub time_state: &'c TimeState,
-    pub canvas: &'d mut skia_safe::Canvas,
+    pub canvas: &'d skia_safe::Canvas,
     pub coordinate_system_helper: CoordinateSystemHelper,
 }
 

@@ -121,7 +121,7 @@ fn main() {
 
 /// Called when winit passes us a WindowEvent::RedrawRequested
 fn draw(
-    canvas: &mut skia_safe::Canvas,
+    canvas: &skia_safe::Canvas,
     _coordinate_system_helper: &CoordinateSystemHelper,
     frame_count: i32,
 ) {
